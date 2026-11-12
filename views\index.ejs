@@ -1,0 +1,11 @@
+<h1>Not Listesi (CRUD Ödevi)</h1>
+<a href="/add">Yeni Ekle</a>
+<ul>
+    <% notes.forEach(note => { %>
+        <li>
+            <%= note.title %> 
+            <a href="/edit/<%= note._id %>">Güncelle</a> | 
+            <a href="/delete/<%= note._id %>">Sil</a>
+        </li>
+    <% }) %>
+</ul>
